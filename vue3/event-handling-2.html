@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>List Rendering</title>
+    <title>Event Handling</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <style>
+    #box {
+        min-width: 300px;
+        min-height: 300px;                
+    }
+    </style>
 </head>
 <body>
     <div class="container py-5" id="app">
-        <h2>Top 10 Frameworks</h2>
-        <ul class="list-group">
-            <li class="list-group-item" v-for="(framework, i) in topTenFrameworks">{{ (i+1) + '. ' + framework }}</li>        
-        </ul>
+        <div id="box" class="row bg-info">
+           <div class="col my-auto text-center text-light">
+             Mouse over here
+           </div>
+        </div>
+
+        <p class="lead text-center mt-3">
+            <span class="badge badge-primary">X</span> {{ x }}
+            <span class="badge badge-primary ml-2">Y</span> {{ y }}
+        </p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -20,10 +32,9 @@
     new Vue({
         el: '#app',
         data: {
-            topTenFrameworks: [
-                "ASP.NET", "AngularJS", "Ruby on Rails", "ASP.NET MVC", "React", "Django", "Angular", "Laravel", "Spring", "Express",
-            ]
-        }
+            x: 0,
+            y: 0
+        }        
     })
     </script>
 </body>
