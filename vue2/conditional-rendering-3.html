@@ -9,13 +9,13 @@
 </head>
 <body>
     <div class="container py-5" id="app">
-        <div class="alert alert-warning">
+        <div v-if="!records.length" class="alert alert-warning">
             You have no any records
         </div>
-        <div class="alert alert-primary">
+        <div v-else-if="records.length === 1" class="alert alert-primary">
             You have only 1 record
         </div>
-        <div class="alert alert-success">
+        <div v-else class="alert alert-success">
             You have more than 1 records
         </div>
     </div>
@@ -25,8 +25,8 @@
     new Vue({
         el: '#app',
         data: {
-            records: []
-        }        
+            records: ['qwqw']
+        }
     })
     </script>
 </body>

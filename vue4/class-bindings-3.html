@@ -15,7 +15,8 @@
 </head>
 <body>
     <div class="container py-5" id="app">
-        <div class="alert" :class="alertType">
+        <div class="alert alert-primary"
+        :class="alertType">
             This is alert-primary
         </div>
 
@@ -37,7 +38,7 @@
     new Vue({
         el: '#app',
         data: {
-            alertType: 'alert-primary'
+          alertType: 'alert-primary'
         }
     })
     </script>

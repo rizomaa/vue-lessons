@@ -12,13 +12,13 @@
         <h1>Vote Your Favorite Frameworks</h1>
         <ul class="list-group">
             <li v-for="framework in favoriteFrameworks" class="list-group-item d-flex justify-content-between align-items-center">
-                {{ framework.name }}   
-                <button class="btn btn-outline-primary">
+                {{ framework.name }}
+                <button v-on:click="upvote(framework)" class="btn btn-outline-primary">
                     Upvote
                     <span class="badge badge-primary badge-pill">{{ framework.votes }}</span>
                 </button>
-            </li>                     
-        </ul>        
+            </li>
+        </ul>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -31,7 +31,12 @@
                 { name: "React.js", votes: 0 },
                 { name: "Vue.js", votes: 0 },
             ]
-        }        
+        },
+        methods: {
+          upvote (framework) {
+            framework.votes++;
+          }
+        }
     })
     </script>
 </body>

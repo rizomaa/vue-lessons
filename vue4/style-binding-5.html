@@ -9,12 +9,12 @@
 </head>
 <body>
     <div class="container py-5" id="app">
-        <h1 class="display-1 p-5" :style="[style1, style2, style3, style4]">Style me</h1>
+        <h1 class="display-1 p-5">Style me</h1>
 
         <div class="form-row">
             <div class="form-group col-md-2">
                 <label>Background</label>
-                <select v-model="style1.backgroundColor" class="form-control">
+                <select class="form-control">
                     <option>Background</option>
                     <option value="white">White</option>
                     <option value="red">Red</option>
@@ -24,7 +24,7 @@
             </div>
             <div class="form-group col-md-2">
                 <label>Text Color</label>
-                <select v-model="style2.color" class="form-control">
+                <select class="form-control">
                     <option>Color</option>
                     <option value="black">Black</option>
                     <option value="white">White</option>
@@ -33,7 +33,7 @@
             </div>
             <div class="form-group col-md-2">
                 <label>Border</label>
-                <select v-model="style3.border" class="form-control">
+                <select class="form-control">
                     <option>Border</option>
                     <option value="2px dashed red">2px red</option>
                     <option value="4px dashed green">4px green</option>
@@ -42,7 +42,7 @@
             </div>
             <div class="form-group col-md-2">
                 <label>Text Transform</label>
-                <select v-model="style4.textTransform" class="form-control">
+                <select class="form-control">
                     <option>Transform</option>
                     <option value="capitalize">Capitalize</option>
                     <option value="uppercase">Uppercase</option>

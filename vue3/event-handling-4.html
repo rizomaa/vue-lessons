@@ -21,7 +21,7 @@
         </ul>
 
         <div class="form-group">
-          <input v-model="framework" type="text" class="form-control" placeholder="Enter Your another favorite Framework">
+          <input v-on:keyup.enter="handleSubmit" v-on:keyup.esc="clearText" v-model="framework" type="text" class="form-control" placeholder="Enter Your another favorite Framework">
         </div>
     </div>
 
@@ -42,11 +42,16 @@
                 framework.votes++
             },
             handleSubmit () {
+              if (this.framework.trim()) {
                 this.favoriteFrameworks.push({
                     name: this.framework,
                     votes: 0
                 });
                 this.framework = ''
+              }
+            },
+            clearText () {
+              this.framework = ''
             }
         }
     })

@@ -12,7 +12,7 @@
         <div v-if="!records.length" class="alert alert-warning">
             You have no any records
         </div>
-        <div class="alert alert-success">
+        <div v-else class="alert alert-success">
             You have some records
         </div>
     </div>
@@ -22,7 +22,7 @@
     new Vue({
         el: '#app',
         data: {
-            records: []
+            records: [123]
         }
     })
     </script>

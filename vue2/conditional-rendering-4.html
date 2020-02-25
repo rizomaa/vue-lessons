@@ -9,16 +9,16 @@
 </head>
 <body>
     <div class="container py-5" id="app">
-        <div class="alert alert-primary">
+        <div v-if="showAlertPrimary" class="alert alert-primary">
             v-if Alert
         </div>
-        <div class="alert alert-secondary">
+        <div v-show="showAlertSecondary" class="alert alert-secondary">
             v-show Alert
         </div>
 
         <div>
-            <button class="btn btn-primary">Toggle Message (v-if)</button>
-            <button class="btn btn-secondary">Toggle Message (v-show)</button>
+            <button v-on:click="showAlertPrimary = !showAlertPrimary" class="btn btn-primary">Toggle Message (v-if)</button>
+            <button v-on:click="showAlertSecondary =!showAlertSecondary" class="btn btn-secondary">Toggle Message (v-show)</button>
         </div>
     </div>
 
